@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomberos Panuco Ver.</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: black;
+            color: white;
+            margin: 0;
+        }
+        .info-container {
+            border: 1px solid #333;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #222;
+        }
+        h1 {
+            text-align: center;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        .button:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bomberos Panuco Ver.</h1>
+    
+    <!-- Contenedor para mostrar la informaciÃ³n -->
+    <div id="info-container" class="info-container">
+        <!-- AquÃ­ se mostrarÃ¡ la informaciÃ³n dinÃ¡mica -->
+    </div>
+
+    <!-- BotÃ³n para obtener informaciÃ³n sobre incendio en casa -->
+    <button class="button" onclick="mostrarIncendioCasa()">Incendio de Casa</button>
+
+    <!-- Script para actualizar dinÃ¡micamente la informaciÃ³n -->
+    <script>
+        // FunciÃ³n para mostrar informaciÃ³n sobre incendio en casa
+        function mostrarIncendioCasa() {
+            const infoContainer = document.getElementById('info-container');
+            infoContainer.innerHTML = `
+                <div class="info-container">
+                    <h2>Incendio en Casa</h2>
+                    <p>Un incendio en casa puede ser devastador. Es crucial actuar rÃ¡pidamente y de manera segura. AquÃ­ algunos pasos:</p>
+                    <ul>
+                        <li>Evacuar a todos los ocupantes de la casa de manera segura y rÃ¡pida.</li>
+                        <li>Llamar inmediatamente a los servicios de emergencia utilizando el nÃºmero local de bomberos.</li>
+                        <li>Intentar cerrar las ventanas y puertas al salir, pero no preocuparse por la cerradura.</li>
+                        <li>No utilizar ascensores en caso de humo o fuego.</li>
+                        <li>Si es posible, utilizar una manta hÃºmeda para cubrirse la nariz y la boca mientras se evacua.</li>
+                    </ul>
+                    <p>Para obtener mÃ¡s informaciÃ³n especÃ­fica sobre cÃ³mo prevenir incendios y cÃ³mo actuar en caso de emergencia, contacte a los bomberos locales o visite su sitio web oficial.</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
